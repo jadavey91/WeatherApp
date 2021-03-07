@@ -1,7 +1,11 @@
 const express = require('express');
 const hbs = require('express-handlebars');
+const getWeather = require('./lib/weather');
+const path = require('path');
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.engine('hbs', hbs({
     extname : 'hbs'
@@ -10,7 +14,8 @@ app.engine('hbs', hbs({
 app.set('view engine', '.hbs');
 
 app.get('/', (req,res)=>{
-    res.render('index');
+    let data = getWeather();
+    res.render('index', {data});
 });
 
 app.get('/about', (req,res)=>{
