@@ -1,3 +1,39 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Russo+One&display=swap');
+
+body {
   background-color: slateblue;
-};
+  font-family: 'Russo One', sans-serif;
+}
+
+nav {
+  background-color: #1d1d1d;
+  padding: 10px 15px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  font-family: 'Fugaz One', cursive;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.description{
+  text-transform: capitalize;
+}
+
+.navTitle{
+  color:white;
+  font-size: 2.5em;
+}
+
+.weather li {
+  display: flex;
+  justify-content: space-around;
+}
