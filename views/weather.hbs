@@ -1,4 +1,12 @@
-<h2>Weather of Interest</h2>
+<h1 class="locationsTitle">Locations of Interest</h1>
+<div class="Locations">
+  <button class="buttonLocations" onClick="location.replace('http://localhost:3000/weather/sandbach/uk')">SDB</button>
+  <button class="buttonLocations" style="animation-delay:0.07s" onClick="location.replace('http://localhost:3000/weather/norwich/uk')">NWI</button>
+  <button class="buttonLocations" style="animation-delay:0.14s" onClick="location.replace('http://localhost:3000/weather/irvine/usa')">IRV</button>
+  <button class="buttonLocations" style="animation-delay:0.21s" onClick="location.replace('http://localhost:3000/weather/san luis obispo/usa')">SLO</button>
+  <button class="buttonLocations" style="animation-delay:0.28s" onClick="location.replace('http://localhost:3000/weather/berlin/ger')">BER</button>
+  <button class="buttonLocations" style="animation-delay:0.35s" onClick="location.replace('http://localhost:3000/weather/plzen/czk')">PLZ</button>
+</div>
 
 <form action="/weather" method="POST">
   <label for="city">City: </label>
