@@ -15,14 +15,14 @@ router.get("/:city/:code", async (req, res) => {
   }
 
   let name = data.name;
-  let temp = data.main.temp;
-  let feels_like = data.main.feels_like;
+  let temp = `${data.main.temp}°C`;
+  let feels_like = `${data.main.feels_like}°C`;
   let description = data.weather[0].description;
   let sunRise = convertTime(data.sys.sunrise);
   let sunSet = convertTime(data.sys.sunset);
   res.render("weather", {
     name,
-    data: { name, temp, feels_like, description, sunRise, sunSet },
+    data: { temp, feels_like, description, sunRise, sunSet },
     listExists: true,
   });
 });
@@ -43,13 +43,13 @@ router.post("/", async (req, res) => {
   }
   let name = data.name;
   let description = data.weather[0].description;
-  let temp = data.main.temp;
-  let feels_like = data.main.feels_like;
+  let temp = `${data.main.temp}°C`;
+  let feels_like = `${data.main.feels_like}°C`;
   let sunRise = convertTime(data.sys.sunrise);
   let sunSet = convertTime(data.sys.sunset);
   res.render("weather", {
     name,
-    data: { name, temp, feels_like, description, sunRise, sunSet },
+    data: { temp, feels_like, description, sunRise, sunSet },
     listExists: true,
   });
 });
