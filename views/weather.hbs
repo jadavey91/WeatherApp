@@ -1,4 +1,4 @@
-<h1 class="locationsTitle">Locations of Interest</h1>
+<h1 class="title">Locations of Interest</h1>
 <div class="Locations">
   <button class="buttonLocations" onClick="location.replace('http://localhost:3000/weather/sandbach/uk')">SDB</button>
   <button class="buttonLocations" style="animation-delay:0.07s" onClick="location.replace('http://localhost:3000/weather/norwich/uk')">NWI</button>
@@ -8,9 +8,9 @@
   <button class="buttonLocations" style="animation-delay:0.35s" onClick="location.replace('http://localhost:3000/weather/plzen/czk')">PLZ</button>
 </div>
 
-<h2 class="findSomewhere">Find out about somewhere else:</h2>
+<h2 class="title">Find out about somewhere else:</h2>
 
-<form action="/weather" method="POST">
+<form class="search" action="/weather" method="POST">
   <label for="city">City: </label>
   <input type="text" name="city" />
   <label for="code">Country Code: </label>
@@ -23,7 +23,7 @@
   <h2>{{err}}</h2>
 {{/if}}
 {{#if listExists}}
-  <h2>Today's weather in {{name}}:</h2>
+  <h2 class="title">Today's weather in {{name}}:</h2>
   <ul class="weatherData">
     <li class="description">Currently: {{description}} </li>
     <li class="temperature">Temperature: {{temp}} </li>
