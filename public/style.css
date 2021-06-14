@@ -25,6 +25,10 @@ nav ul li {
   list-style: none;
 }
 
+.weatherData{
+  /* display: flex; */
+}
+
 .description {
   text-transform: capitalize;
 }

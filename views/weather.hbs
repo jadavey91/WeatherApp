@@ -24,9 +24,11 @@
 {{/if}}
 {{#if listExists}}
   <h2>Today's weather in {{name}}:</h2>
-  <ul>
-    {{#each data}}
-      <li>{{@key}} : {{this}}</li>
-    {{/each}}
+  <ul class="weatherData">
+    <li class="description">Currently: {{description}} </li>
+    <li class="temperature">Temperature: {{temp}} </li>
+    <li class="feelsLike">Feels like: {{feels_like}}</li>
+    <li class="sunRise">Sunrise: {{sunRise}}</li>
+    <li class="sunSet">Sunset: {{sunSet}}</li>
   </ul>
 {{/if}}
