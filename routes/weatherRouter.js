@@ -15,13 +15,15 @@ router.get("/:city/:code", async (req, res) => {
   }
 
   let name = data.name;
-  let temp = `${data.main.temp}°C`;
-  let feels_like = `${data.main.feels_like}°C`;
+  let temp = `${Math.round(data.main.temp)}°C`;
+  let feels_like = `${Math.round(data.main.feels_like)}°C`;
   let description = data.weather[0].description;
+  let minTemp = `${Math.round(data.main.temp_min)}°C`;
+  let maxTemp = `${Math.round(data.main.temp_max)}°C`;
   let sunRise = `${convertTime(data.sys.sunrise)} (GMT)`;
   let sunSet = `${convertTime(data.sys.sunset)} (GMT)`;
   res.render("weather", {
-    name, temp, feels_like, description, sunRise, sunSet,
+    name, temp, feels_like, description, minTemp, maxTemp, sunRise, sunSet,
     listExists: true,
   });
 });
@@ -42,12 +44,14 @@ router.post("/", async (req, res) => {
   }
   let name = data.name;
   let description = data.weather[0].description;
-  let temp = `${data.main.temp}°C`;
-  let feels_like = `${data.main.feels_like}°C`;
+  let temp = `${Math.round(data.main.temp)}°C`;
+  let feels_like = `${Math.round(data.main.feels_like)}°C`;
+  let minTemp = `${Math.round(data.main.temp_min)}°C`;
+  let maxTemp = `${Math.round(data.main.temp_max)}°C`;
   let sunRise = `${convertTime(data.sys.sunrise)} (GMT)`;
   let sunSet = `${convertTime(data.sys.sunset)} (GMT)`;
   res.render("weather", {
-    name, temp, feels_like, description, sunRise, sunSet,
+    name, temp, feels_like, description, maxTemp, minTemp, sunRise, sunSet,
     listExists: true,
   });
 });
