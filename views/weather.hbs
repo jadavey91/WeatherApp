@@ -15,7 +15,7 @@
   <input type="text" name="city" />
   <label for="code">Country Code: </label>
   <input type="text" name="countryCode" />
-  <input type="submit" value="submit" />
+  <input class="buttonLocations" type="submit" value="Search" />
 </form>
 <br />
 
@@ -28,6 +28,8 @@
     <li class="description">Currently: {{description}} </li>
     <li class="temperature">Temperature: {{temp}} </li>
     <li class="feelsLike">Feels like: {{feels_like}}</li>
+    <li class="maxTemp">Max Temperature: {{maxTemp}} </li>
+    <li class="minTemp">Min Temperature: {{minTemp}} </li>
     <li class="sunRise">Sunrise: {{sunRise}}</li>
     <li class="sunSet">Sunset: {{sunSet}}</li>
   </ul>
