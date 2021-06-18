@@ -1,11 +1,34 @@
 <h1 class="title">Locations of Interest</h1>
 <div class="Locations">
-  <button class="buttonLocations" onClick="location.replace('http://localhost:3000/weather/sandbach/uk')">SDB</button>
-  <button class="buttonLocations" style="animation-delay:0.07s" onClick="location.replace('http://localhost:3000/weather/norwich/uk')">NWI</button>
-  <button class="buttonLocations" style="animation-delay:0.14s" onClick="location.replace('http://localhost:3000/weather/irvine/usa')">IRV</button>
-  <button class="buttonLocations" style="animation-delay:0.21s" onClick="location.replace('http://localhost:3000/weather/san luis obispo/usa')">SLO</button>
-  <button class="buttonLocations" style="animation-delay:0.28s" onClick="location.replace('http://localhost:3000/weather/berlin/ger')">BER</button>
-  <button class="buttonLocations" style="animation-delay:0.35s" onClick="location.replace('http://localhost:3000/weather/plzen/czk')">PLZ</button>
+  <button
+    class="buttonLocations"
+    onClick="location.replace('http://localhost:3000/weather/sandbach/uk')"
+  >SDB</button>
+  <button
+    class="buttonLocations"
+    style="animation-delay:0.07s"
+    onClick="location.replace('http://localhost:3000/weather/norwich/uk')"
+  >NWI</button>
+  <button
+    class="buttonLocations"
+    style="animation-delay:0.14s"
+    onClick="location.replace('http://localhost:3000/weather/irvine/usa')"
+  >IRV</button>
+  <button
+    class="buttonLocations"
+    style="animation-delay:0.21s"
+    onClick="location.replace('http://localhost:3000/weather/san luis obispo/usa')"
+  >SLO</button>
+  <button
+    class="buttonLocations"
+    style="animation-delay:0.28s"
+    onClick="location.replace('http://localhost:3000/weather/berlin/ger')"
+  >BER</button>
+  <button
+    class="buttonLocations"
+    style="animation-delay:0.35s"
+    onClick="location.replace('http://localhost:3000/weather/plzen/czk')"
+  >PLZ</button>
 </div>
 
 <h2 class="title">Find out about somewhere else:</h2>
@@ -25,6 +48,7 @@
 {{#if listExists}}
   <h2 class="title">Today's weather in {{name}}:</h2>
   <ul class="weatherData">
+    <li class="descriptionIcon"><img id="icon" src={{descriptionIcon}} /></li>
     <li class="description">Currently: {{description}} </li>
     <li class="temperature">Temperature: {{temp}} </li>
     <li class="feelsLike">Feels like: {{feels_like}}</li>
