@@ -2,6 +2,7 @@ const express = require("express");
 const hbs = require("express-handlebars");
 const path = require("path");
 const bodyParser = require("body-parser");
+const favicon = require("serve-favicon");
 
 const indexRouter = require("./routes/indexRouter");
 const weatherRouter = require("./routes/weatherRouter");
@@ -11,6 +12,8 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.use(favicon(path.join(__dirname, "public", "img", "bricktamland.PNG")));
 
 app.use(express.static(path.join(__dirname, "public")));
 
